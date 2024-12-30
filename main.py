@@ -71,8 +71,8 @@ def mostrar_productos():
     cursor.execute("""
         SELECT * FROM productos
     """)
-
     productos = cursor.fetchall()
+    conexion.commit()
 
     if len(productos) == 0:
         print(f"{Fore.LIGHTMAGENTA_EX}Aun no tenemos productos cargadas en el sistema.")
@@ -156,28 +156,28 @@ while True:
         print(f"{Fore.LIGHTYELLOW_EX}Error! Ingrese una opcion valida")
 
     if opcion == 0:
-                print("Nos vemos!")
-                break
+        print("Nos vemos!")
+        break
     elif opcion == 1:
-                registrar_producto()        
+        registrar_producto()        
 
     elif opcion == 2:
-                mostrar_productos()
+        mostrar_productos()
 
     elif opcion == 3:
-                actualizar_producto()
+        actualizar_producto()
 
     elif opcion == 4:
-                eliminar_producto()
+        eliminar_producto()
 
     elif opcion == 5:
-                reporte_stock()
+        reporte_stock()
 
     elif opcion == 6:
-                mostrar_product()
+        mostrar_product()
     
 
-print("FIN DEL PROGRAMA")
+print(f"{Fore.GREEN}FIN DEL PROGRAMA")
 
 # Cerramos la conexion a la base de datos al finalizar
 conexion.close()
