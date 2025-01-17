@@ -77,8 +77,8 @@ def mostrar_productos():
     if len(productos) == 0:
         print(f"{Fore.LIGHTMAGENTA_EX}Aun no tenemos productos cargadas en el sistema.")
     else:
-        print("ID".ljust(5) + "nombre".ljust(30) + "precio".ljust(15) + "cantidad")
-        
+        print("ID".ljust(5) + "Nombre".ljust(30) + "Precio".ljust(15) + "Cantidad")
+                
         # recorremos el diccionario
         for producto in productos:
             

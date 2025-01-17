@@ -1,0 +1,1 @@
+Proyecto con Python / SQLite3 - Inventario funcionable
